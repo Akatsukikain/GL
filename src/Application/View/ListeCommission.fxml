@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ControllerListeCommission">
+   <children>
+      <HBox alignment="CENTER" style="-fx-background-color: white;">
+         <children>
+            <Text fill="#63b5f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des commissions  :" wrappingWidth="268.76953125">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Separator prefHeight="22.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <ListView fx:id="listeCommission" prefHeight="312.0" prefWidth="600.0" VBox.vgrow="ALWAYS" />
+      <Separator prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: white;" />
+   </children>
+</VBox>

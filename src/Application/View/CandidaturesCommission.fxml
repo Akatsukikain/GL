@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane fx:id="menuPrincipal" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ControllerListeCandidatures">
+    <bottom>
+        <Label alignment="TOP_LEFT" text="Powered by AHEAD" wrapText="true" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <VBox style="-fx-background-color: #63b5f6;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox blendMode="SRC_ATOP" cache="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="220.0" style="-fx-background-color: #63b5f6;">
+                    <children>
+                        <Button fx:id="commissionButton" mnemonicParsing="false" onAction="#commissionOnClick" prefWidth="220.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Commission" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image backgroundLoading="true" url="/images/team.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="rdv" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#rdvOnClick" prefWidth="220.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Rendez-vous" textFill="WHITE" >
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image backgroundLoading="true" url="/images/appointment.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <HBox alignment="CENTER" style="-fx-background-color: white;">
+                    <children>
+                        <Text fill="#63b5f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidatures :">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                        </Text>
+                    </children>
+                </HBox>
+                <Separator prefHeight="32.0" prefWidth="600.0" style="-fx-background-color: white;" />
+                <TableView fx:id="listeCandidatures" prefHeight="243.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="identifiant" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                        <TableColumn fx:id="prenom" prefWidth="84.0" text="Prénom" />
+                    </columns>
+                </TableView>
+                <Separator prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: white;" />
+                <HBox alignment="CENTER" spacing="35.0" style="-fx-background-color: white;">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#retourOnClick" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-radius: 5; -fx-border-width: 2;" text="Retour" />
+                        <Button mnemonicParsing="false" onAction="#systemAide" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-width: 2; -fx-border-radius: 5;" text="Accéder au système d'aide à la décision" />
+                        <Button layoutX="219.0" layoutY="10.0" mnemonicParsing="false" onAction="#rdvButtonOnCLick" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-width: 2; -fx-border-radius: 5;" text="RDV" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

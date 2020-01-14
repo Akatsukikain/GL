@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<DialogPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ControllerAuthentification">
+   <graphic>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/warning_sign.png"
+                   backgroundLoading="true"
+            />
+         </image>
+      </ImageView>
+   </graphic>
+   <content>
+      <AnchorPane style="-fx-background-color: White;">
+         <children>
+            <Text fill="#63b5f6" layoutX="27.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail ou mot de passe non valide">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="closeButton" contentDisplay="CENTER" layoutX="42.0" layoutY="92.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-radius: 5; -fx-border-width: 2;" text="Fermer" textAlignment="CENTER" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="92.0" onAction="#closeButtonOnClick">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox alignment="CENTER" prefHeight="325.0" prefWidth="551.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ControllerStudent">
+    <children>
+        <Label text="Demande de stage" textFill="#63b5f6">
+            <font>
+                <Font size="22.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+        </Label>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Voici les informations dont vous aurez besoin pour effectuer votre demande de stage :" wrappingWidth="406.0" />
+        <Label prefWidth="400.0" text="Le type de stage (ouvrier ou technicien)" />
+        <Label prefWidth="400.0" text="L'adresse de la structure d'accueil" />
+        <Label prefWidth="400.0" text="Le nom de la structure d'accueil" />
+        <Label prefWidth="400.0" text="Une description du déroulement du stage" />
+        <Label prefWidth="400.0" text="Le contact au sein de la structure d'accueil" />
+        <Button fx:id="startForm" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startFormOnClick" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-width: 2; -fx-border-radius: 5;" text="Effectuer ma demande">
+            <VBox.margin>
+                <Insets bottom="30.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>

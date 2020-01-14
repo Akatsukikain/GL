@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.CheckBox?>
+<BorderPane fx:id="menuPrincipal" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.ControllerStudent">
+    <bottom>
+        <Label alignment="TOP_LEFT" text="Powered by AHEAD" wrapText="true" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <VBox style="-fx-background-color: #63b5f6;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox blendMode="SRC_ATOP" cache="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #63b5f6;">
+                    <children>
+                        <Button fx:id="stages" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Stages " textFill="WHITE" onAction="#stageButtonOnClick" >
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/images/stagesicone.png"
+                                               backgroundLoading="true"
+                                        />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="international" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Cursus" textFill="WHITE" onAction="#internationalButtonOnClick">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/images/expinticone.png"
+                                               backgroundLoading="true"
+                                        />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="modules" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Modules complémentaires" textFill="WHITE" onAction="#modulesButtonOnClick">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/images/ueicone.png"
+                                               backgroundLoading="true"
+                                        />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="voeux" mnemonicParsing="false" prefWidth="230.0" style="-fx-background-color: #63b5f6; -fx-alignment: left;" text="Voeux en cours" textFill="WHITE" onAction="#CurrentWishOnClick">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="/images/encoursicone.png"
+                                               backgroundLoading="true"
+                                        />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+            <children>
+                <HBox alignment="CENTER" prefHeight="24.0" prefWidth="680.0">
+                    <children>
+                        <Text fill="#63b5f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulaire de demande de stage">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="-10.0" top="5.0" />
+                            </HBox.margin>
+                        </Text>
+                    </children>
+                </HBox>
+                <Separator prefHeight="35.0" prefWidth="680.0" />
+                <TitledPane style="-fx-background-color: white;" text="Entreprise" VBox.vgrow="ALWAYS">
+                    <content>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;">
+                            <children>
+                                <VBox spacing="10.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Nom :" />
+                                        <TextField />
+                                        <Label text="Adresse :" />
+                                        <TextArea prefHeight="58.0" prefWidth="254.0" />
+                                    </children>
+                                </VBox>
+                                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Coordonnées du contact :" />
+                                        <TextArea prefHeight="101.0" prefWidth="226.0" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Stage" VBox.vgrow="ALWAYS">
+                    <content>
+                        <HBox style="-fx-background-color: white;">
+                            <children>
+                                <VBox spacing="10.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Type :" />
+                                        <ComboBox prefWidth="150.0" />
+                                        <Label text="Date de début :" />
+                                        <DatePicker />
+                                        <Label text="Date de fin :" />
+                                        <DatePicker />
+                                        <CheckBox mnemonicParsing="false" text="Stage à l'étranger" />
+                                    </children>
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <VBox spacing="10.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Description :" />
+                                        <TextArea />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                </TitledPane>
+                <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button fx:id="formInternship" mnemonicParsing="false" onAction="#formInternShipOnClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: #63b5f6; -fx-border-width: 2; -fx-border-radius: 5;" text="Valider" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="30.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Region prefHeight="30.0" prefWidth="168.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="annulerButton" mnemonicParsing="false" onAction="#goToMenu" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: #63b5f6; -fx-border-radius: 5;" text="Annuler">
+                            <HBox.margin>
+                                <Insets bottom="20.0" right="30.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
+
